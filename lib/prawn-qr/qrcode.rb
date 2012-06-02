@@ -24,14 +24,24 @@ module Prawn
       end
 
       def draw
+        document.fill_color 'ffffff'
+        document.rectangle(
+          [horizontal_offset, vertical_offset + table_size],
+          table_size, table_size
+        )
+        document.fill
+
         qrcode.reverse.each_with_index do |row, y|
           y += 1
           row.each_with_index do |dark, x|
-            document.fill_color = (dark ? '000000' : 'ffffff')
-            document.fill_rectangle(
-              [x * cell_size + horizontal_offset, y * cell_size + vertical_offset],
-              cell_size, cell_size
-            )
+            if dark
+              document.fill_color = '000000'
+              document.rectangle(
+                [x * cell_size + horizontal_offset, y * cell_size + vertical_offset],
+                cell_size, cell_size
+              )
+              document.fill
+            end
           end
         end
       end
@@ -44,15 +54,17 @@ module Prawn
 
       def cell_height
         return @cell_height if @cell_height
-        qr = qrcode
-        height = qr.length
+        height = qrcode.length
         @cell_height = document.bounds.height.to_f / height.to_f
+      end
+
+      def table_size
+        cell_size * qrcode.length
       end
 
       def cell_width
         return @cell_width if @cell_width
-        qr = qrcode
-        width = qr.first.length
+        width = qrcode.first.length
         @cell_width = document.bounds.width.to_f / width.to_f
       end
 
