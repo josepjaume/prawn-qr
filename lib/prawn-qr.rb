@@ -4,7 +4,8 @@ require 'prawn'
 
 module Prawn
   module Qr
-    # Public: Generates a QR code on the inside of the current boundaries.
+    # Public: Generates a QR code centered on the inside of the current 
+    # boundaries.
     #
     # content - The text content of the QR to be generated
     #
