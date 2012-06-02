@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'qrio'
   gem.add_development_dependency 'mini_magick'
   gem.add_development_dependency 'mocha'
+  gem.add_development_dependency 'rake'
 end
