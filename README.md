@@ -1,4 +1,4 @@
-# prawn-qr
+# prawn-qr [![Build Status](https://secure.travis-ci.org/josepjaume/prawn-qr.png)](http://travis-ci.org/josepjaume/prawn-qr) [![Dependency Status](https://gemnasium.com/josepjaume/prawn-qr.png)](http://gemnasium.com/josepjaume/prawn-qr)
 
 Prawn-qr is a prawn extension for creating QR Codes inside of a prawn document thanks to [rqrcode](https://github.com/whomwah/rqrcode).
 
