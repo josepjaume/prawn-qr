@@ -1,6 +1,6 @@
 # prawn-qr
 
-Prawn-qr is a library for creating qrcodes inside of a prawn document thanks to [rqrcode](https://github.com/whomwah/rqrcode).
+Prawn-qr is a prawn extension for creating QR Codes inside of a prawn document thanks to [rqrcode](https://github.com/whomwah/rqrcode).
 
 ## Installation
 

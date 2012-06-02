@@ -4,9 +4,9 @@ require File.expand_path('../lib/prawn-qr/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Josep Jaume"]
   gem.email         = ["josepjaume@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Prawn-qr is a prawn extension for creating QR Codes inside of a prawn document}
+  gem.summary       = gem.description
+  gem.homepage      = "http://github.com/josepjaume/prawn-qr"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
