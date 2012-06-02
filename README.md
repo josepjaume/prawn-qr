@@ -1,6 +1,6 @@
-# Prawn::Qr
+# prawn-qr
 
-TODO: Write a gem description
+Prawn-qr is a library for creating qrcodes inside of a prawn document thanks to [rqrcode](https://github.com/whomwah/rqrcode).
 
 ## Installation
 
@@ -12,13 +12,15 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install prawn-qr
-
 ## Usage
 
-TODO: Write usage instructions here
+```Ruby
+require 'prawn-qr'
+
+Prawn::Document.generate "test.pdf" do
+ qrcode "http://codegram.com"
+end
+```
 
 ## Contributing
 
